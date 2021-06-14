@@ -10,14 +10,13 @@ body{
 main{
     display: grid;
     grid-template-areas:
-        "header header"
-        "tapete opciones"
-        "footer footer"
+        "header"
+        "tablero"
+        "footer"
     ;
-    grid-template-columns: 1fr 35%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     background-color: #4aa05d;
-    width: 100vw;
     height: 100vh;
 }
 
@@ -26,6 +25,15 @@ main header{
     padding: 30px 10px;
     background-color: #364c37;
     grid-area: header;
+}
+
+main .tablero{
+    grid-area: tablero;
+    display: grid;
+    grid-template-areas:
+        "tapete opciones"
+    ;
+    grid-template-columns: 1fr 35%;
 }
 
 main header h1{
@@ -93,16 +101,11 @@ main footer a{
 }
 
 @media only screen and (max-width: 700px) {
-    main{
-        display: grid;
+    main .tablero{
         grid-template-areas:
-            "header"
             "tapete"
             "opciones"
-            "footer"
         ;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 1fr auto;
     }
 
     main .opciones button{

@@ -12,31 +12,27 @@
     <main>
         <header><h1>Black Jack</h1></header>
 
-        
-        <div class="tapete">
-            <div class="baraja barajaJ">
-                <img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">
-                <img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">
-                <img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">
+        <section class="tablero">
+            <div class="tapete">
+                <div id="barajaJ" class="baraja barajaJ">
+                    <!--<img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">-->
+                </div>
+                <div id="barajaC" class="baraja barajaC">
+                    <!--<img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">-->
+                </div>
             </div>
-            <div class="baraja barajaC">
-                <img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">
-                <img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">
-                <img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">
+    
+            <div class="opciones">
+                <ul>
+                    <li>Nombre: <span id="puntosJ" class="puntosJ"></span></li>
+                    <li>Computadora: <span id="puntosC" class="puntosC"></span></li>
+                </ul>
+                <button id="btnNuevoJuego">Nuevo juego</button>
+                <button id="btnPedirCarta">Pedir carta</button>
+                <button id="btnDetener">Detener</button>
             </div>
-        </div>
-
-        <div class="opciones">
-            <ul>
-                <li>Nombre: 0</li>
-                <li>Computadora: 0</li>
-            </ul>
-            <button>Nuevo juego</button>
-            <button>Pedir carta</button>
-            <button>Detener</button>
-        </div>
+        </section>
         
-
         <footer>Desarrollado por Jonás García - <a href="https/www.japp.es">Japp</a></footer>
     </main>
 
