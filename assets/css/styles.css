@@ -48,14 +48,14 @@ main .tapete{
     grid-area: tapete;
 }
 
-main .tapete .baraja{
+main .tapete .mano{
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding:10px;
 }
 
-main .tapete .baraja img{
+main .tapete .mano img{
     height: auto;
     width: 100%;
 }
