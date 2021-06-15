@@ -56,8 +56,7 @@ const pedirCarta = () =>{
 
     const carta = deck.pop();
     return carta;
-} 
-pedirCarta();
+}
 
 // VALOR DE LAS CARTAS RECIBIDAS
 const valorCarta = (carta) => {
@@ -96,9 +95,19 @@ const turnoComputadora = ( puntosMinimos ) => {
             break;
         }
 
-    } while( (puntosComputadora < puntosMinimos) && (puntosMinimos <= 21) ){
+    } while( (puntosComputadora < puntosMinimos) && (puntosMinimos <= 21) );
 
-    }
+    // Resultado
+    setTimeout(()=>{
+        if (puntosJugador === puntosComputadora){
+            alert('Tablas!!');
+        }
+        else if (puntosJugador > puntosComputadora && puntosJugador <= 21  || puntosComputadora > 21){
+            alert('Ganaste!!!');
+        }else if (puntosJugador < puntosComputadora && puntosComputadora <= 21 || puntosJugador > 21){
+            alert('Perdiste!!!');
+        }
+    },100);
 }
 
 // EVENTOS
