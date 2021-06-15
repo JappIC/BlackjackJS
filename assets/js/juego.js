@@ -12,9 +12,19 @@ const miModulo = (() => {
           btnDetener = document.querySelector('#btnDetener'),
           btnNuevo   = document.querySelector('#btnNuevo');
 
-    const divCartasJugadores = document.querySelectorAll('.mano'),
+    const divCartasJugadores = document.querySelectorAll('#mano'),
           puntosHTML = document.querySelectorAll('small');
+          
+    new CircleType(document.querySelector('#titulo'))
+    .dir(-1)
+    .radius(384);
+    
 
+    new CircleType(document.querySelector('#info'))
+    .dir(-1)
+    .radius(420);
+
+    //$(titulo.element).fitText();
 
     // Esta función inicializa el juego 
     const inicializarJuego = ( numJugadores = 2 ) => {

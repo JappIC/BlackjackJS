@@ -5,31 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <title>Black Jack</title>
 </head>
 <body>
 
     <main>
-        <header><h1>Black Jack</h1></header>
+        <header>
+            <h1 id="titulo" class="titulo">Blackjack JS</h1>
+            <p id="info" class="info">Intenta conseguir un valor lo más próximo a 21</p>
+            <ul class="marcador">
+                <li>Jugador: <small id="puntosHTML" class="puntosJ"></small></li>
+                <li>Computadora: <small id="puntosHTML" class="puntosC"></small></li>
+            </ul>
+        </header>
 
         <section class="tablero">
             <div class="tapete">
-                <div id="barajaJ" class="barajaJ mano">
+                <div id="mano" class="mano">
                     <!--<img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">-->
                 </div>
-                <div id="barajaC" class="barajaC mano">
+                <div id="mano" class="mano">
                     <!--<img src="./assets/cartas/grey_back.png" alt="Trasera de carta Gris">-->
                 </div>
             </div>
     
             <div class="opciones">
-                <ul>
-                    <li>Nombre: <small id="puntosHTML" class="puntosJ"></small></li>
-                    <li>Computadora: <small id="puntosHTML" class="puntosC"></small></li>
-                </ul>
-                <button id="btnNuevo">Nuevo juego</button>
-                <button id="btnPedir">Pedir carta</button>
-                <button id="btnDetener">Detener</button>
+                <button id="btnNuevo">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>Nuevo juego</span> 
+                </button>
+                <button id="btnPedir">
+                    <i class="fas fa-copy"></i></i> 
+                    <span>Pedir carta</span>
+                </button>
+                <button id="btnDetener">
+                    <i class="far fa-hand-paper"></i>
+                    <span>Plantarse</span>
+                </button>
             </div>
         </section>
         
@@ -37,6 +51,7 @@
     </main>
 
     <script src="./assets/js/underscore.js"></script>
+    <script src="./assets/js/circletype.min.js"></script>
     <script src="./assets/js/juego.js"></script>
     <script>
         document.querySelector('#btnNuevo').addEventListener('click', () => {
