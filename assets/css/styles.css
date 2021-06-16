@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 
 body{
+    background-color: #145021;
     padding: 0;
     margin: 0;
     font-family: 'Limelight', sans-serif;
@@ -16,7 +17,6 @@ main{
     ;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-    background-color: #4aa05d;
     height: 100vh;
 }
 
@@ -45,16 +45,23 @@ main header p.info{
 }
 
 main header ul.marcador{
+    color: white;
+    display: grid;
+    font-size: 40px;
+    grid-template-columns: 1fr 1fr;
     list-style: none;
     margin: 60px 0 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 main header ul.marcador li{
     margin: 0 15px;
 }
+
+main header ul.marcador li:nth-child(2){
+    text-align: right;
+}
+
 
 /* TAPETE */
 main .tapete{
@@ -67,6 +74,7 @@ main .tapete .mano{
     border-radius: 5px;
     border: 1px solid yellow;
     margin: 0 15px;
+    height: 184px;
 }
 
 main .tapete .mano img{
@@ -93,17 +101,22 @@ main .opciones{
 }
 
 main .opciones button{
-    background-color: #364c37;
-    border: 0;
+    background-color: #fcff47;
+    border: 1px solid #000;
     border-radius: 50%;
     cursor: pointer;
-    color:#fff;
+    color: #145021;
     font-size: 30px;
     font-family: 'Limelight', sans-serif;
     margin: 0 5px;
     padding: 20px 25px;
     position: relative;
     transition: 0.3s;
+}
+
+main .opciones button:hover{
+    background-color: #145021;
+    color: #fcff47;
 }
 
 main .opciones button span{
@@ -126,11 +139,11 @@ main .opciones button:hover span{
 
 /* FOOTER */
 main footer{
+    color:#fff;
+    font-size: 12px;
     grid-area: footer;
     padding: 20px 10px;
-    background-color: #364c37;
     text-align: center;
-    color:#fff;
 }
 
 main footer a{
@@ -149,12 +162,21 @@ main footer a{
         font-size: 4vw;
     }
 
+    main header ul.marcador{
+        font-size: 20px;
+    }
+
     main .tapete{
         grid-template-columns: 1fr;
     }
 
     main .tapete .mano{
         margin-top: 20px;
+        height: 124px;
+    }
+
+    main .tapete .mano img {
+        max-width: 80px;
     }
 
     main .opciones button{
